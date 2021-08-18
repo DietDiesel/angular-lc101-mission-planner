@@ -3,16 +3,16 @@
     <ul>
         <li *ngFor="let member of candidates" 
         [class.selected]="isInCrew(member)"
-        (click)="addCrewMember(member)" 
-        (mouseover)="astronautHover = member" 
-        (mouseout)="astronautHover = false">{{member.name}}</li>
+        (click)="addCrewMember(member)">{{member.name}}</li>
     </ul>
 </div>
 <hr>
 <div class="displayBox">
     <h3>Crew <span [hidden]="isCrewFull()">Full</span></h3>
     <ol>
-        <li *ngFor="let astronaut of crew">{{astronaut.name}}</li>
+        <li *ngFor="let astronaut of crew"
+        (mouseover)="astronautHover = astronaut" 
+        (mouseout)="astronautHover = false">{{astronaut.name}}</li>
     </ol>
     <img *ngIf="astronautHover" [src]="astronautHover.photo">
 </div>

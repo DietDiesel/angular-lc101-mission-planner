@@ -6,6 +6,11 @@
 button {
     margin: 2px;
     cursor: pointer;
+    background-color: palegreen;
+}
+
+button:disabled {
+    background-color: salmon;
 }
 
 h3 {
@@ -16,3 +21,7 @@ h3 {
 
 
 /* Add the 'nearMaxMass' class style here: */
+.nearMaxMass {
+    font-weight: bold;
+    color: red;
+}
